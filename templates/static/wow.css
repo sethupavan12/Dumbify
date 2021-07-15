@@ -1,0 +1,32 @@
+/* make the body of IntroPage.html black */
+
+body{
+    background-color: black;
+}
+
+/* Centre the middle class of the page */
+.middle{
+    margin: 0 auto;
+    width: 800px;
+    height: 600px;
+    position: relative;
+    top: -50px;
+    left: -50px;
+}
+
+
+/* make the webpage look beautiful */
+html{
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+
+
+

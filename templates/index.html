@@ -1,0 +1,105 @@
+<!-- basic html page-->
+<html>
+<head>
+  <title>Dumbify</title>
+  <style type="text/css">
+    html{
+    background-color: rgb(21, 167, 65);
+    }
+
+    /* Centre the middle class of the page */
+    .middle{
+        margin: 0 auto;
+        width: 800px;
+        height: 600px;
+        position: relative;
+        top: -50px;
+        left: -50px;
+    }
+
+
+    /* make the webpage look beautiful */
+    body{
+        width: 1500px;
+        height: 1200px;
+        /*centre the margin of the page*/
+        margin: 0 auto;
+        background-color: #f1f1f1;
+        padding: 20px;
+        
+        border-radius: 10px;
+    }
+    input[type=text] {
+        width: 100%;
+        /* make the text box bigger */
+        height: 150px;
+        padding: 12px 20px;
+        margin: 0;
+        border: none;
+        /* text overflow to next line */
+        overflow: auto;
+        
+        border-bottom: 1px solid #d2d2d2;
+        /* make the text to fit with in the box fully */
+        text-align: center;
+        color: #555;
+        /* if the text in the box is too long to fit, increase the height of the input field */
+        overflow: hidden;
+        /* make the text box a little bit bigger than the default */
+        font-size: 20px;
+        padding: 10px;
+        border: none;
+        font-size: 20px;    
+        color: #333;
+
+        background-color: #fff;
+        border-radius: 10px;
+        border-radius: 10px;
+
+        }
+    h3{
+        font-size: 50px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        /*centre this*/
+        text-align: center;
+    }
+    .submit{
+        /* make the button look pretty */
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 20%;
+        height: 40px;
+        /* center this */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -20px;
+        margin-left: -100px;
+    
+
+
+    }
+    </style>
+
+
+</head>
+<body>
+    <h3> Enter the text here</h3>
+    <div class="container">
+        <form method="POST">
+            <input type="text" size="100" name="text">
+            <br>    
+            <br>    
+            <input  class= "submit" type="submit">
+        </form>
+
+    </div>
+    <p> This is a dumbified version of the text you entered</p>
+    {{output}}
+</body>
