@@ -3,21 +3,177 @@
 <!-- Link this html to wow.css -->
 <head>
     <title>Dumbify</title>
-    <link rel="stylesheet" type="text/css" href="static/wow.css">
+    <style>
+        /* make the background neon green */
+        body {
+            background-color: #00FF00;
+            font-size: 16px;
+            font-family: "Open Sans", sans-serif;
+            color: rgb(0, 0, 0);
+            padding: 0;
+            margin: 0;
+            text-align: center;
+
+        }
+        /* make middle a box */
+        .middle {
+            /* make the box a square */
+            width: 95%;
+            height: 50%;
+        
+
+            background-color: #00FF00;
+            border: 2px solid black;
+            border-radius: 10px;
+            /* justify text to the left */
+            text-align: left;
+            /* make the text bigger */
+            font-size: 20px;
+            /* make the text black */
+            color: black;
+            /* make the text bold */
+            font-weight: bold;
+            
+            margin: auto;
+            padding: 0;
+        }
+        h2,p{
+            /* make the text look amazing */
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300;
+            font-size: 2em;
+            color: rgb(0, 0, 0);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            /* make the text bold */
+            font-weight: bold;
+    
+
+        }
+        h1{
+
+            font-size: 3em;
+            font-weight: 300;
+            color: rgb(0, 0, 0);
+            margin: 50 50 50 0;
+
+            padding: 0;
+            text-align: center;
+            /* make the text bold */
+            font-weight: bold;
+
+        }
+        /* make the page look pretty */
+
+        .instructions{
+            /* make the instructions look pretty */
+            font-size: 1.5em;
+            font-weight: 300;
+            color: rgb(0, 0, 0);
+            margin: 0 0 0 25%;
+            padding: 0;
+            /* center the instructions */
+            text-align: left;
+            /* make the instructions bold */
+            font-weight: bold;
+
+
+        }
+        ol{
+            /* put the list in a box */
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            /* make the list look pretty */
+            font-size: 1.5em;
+            font-weight: 300;
+            color: rgb(0, 0, 0);
+            margin: 0 auto;
+            padding: 0;
+            /* center the instructions */
+            text-align: centre;
+            /* make the instructions bold */
+            font-weight: bold;
+    
+        }
+        a{
+            /* make the links white */
+            color: rgb(82, 8, 129);
+            /* when hovered, make them blue */
+
+            text-decoration: underline;
+
+            
+            
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        i{
+            /* make the font look pretty */
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300;
+            color: rgb(0, 0, 0);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            /*smaller font*/
+            font-size: 1em;
+
+        }
+    </style>
 </head>
 <body>
     <!-- Place this in the middle of the page-->
-    <div class="middle">
+    <div class="top">
         <h1>Dumbify</h1>
     </div>
 
     <div class="middle">
         <h2>Dumbify is a tool for making your text more concise and readable.</h2>
+        <br>
+        <br>
+        
+        <p class="instructions">    
+            How to use:<br>
+            <br>    
+            1. Select what kind of simplification you want.<br>
+            <br>
+            2. Paste the text you want to dumbify.<br>
+            <br>
+            3. Click on the submit below.<br>
+        </p>
     </div>
-    
+
+    <!-- make a ordered list with 1. Generate 2nd Grade Summary , 2. Generate TL;DR (Too Long; Didn't Read), 3. Generate One line Summary -->
+    <ol>
+        <li>
+            <a href="/2nd_grade_summary">Generate 2nd Grade Summary:          <br>    </a> <br>
+            <i>
+                This will generate a summary of the text so that even a 2nd grader can understand.<br><br><br>
+            </i>
+        </li>
+        <li>
+            <a href="/TLDR">Generate TL;DR (Too Long; Didn't Read):            <br>  </a><br>
+            <i>
+                This will help you understand the context without having to read the whole thing.<br><br><br>
+            </i>
+        </li>
+        <li>
+            <a href="/One_Line_Summary">Generate One line Summary:           <br>   </a><br>
+            <i>
+                This gives you the whole thing in one line.<br><br><br>
+            </i>
+        </li>
+    </ol>
+        <br>
+
 
     
-
 </body>
 
 </html>

@@ -32,7 +32,7 @@ def second_grade_summary_post():
         stop=["\"\"\""]
     )
     output= response.choices[0].text
-    return render_template('index.html', output=output) 
+    return render_template('index.html', output=output,kind="2nd Grade Summary") 
 
 @app.route('/TLDR')
 def tldr():
@@ -54,14 +54,14 @@ def tldr_post():
         stop=["\"\"\""]
     )
     output= response.choices[0].text
-    return render_template('index.html', output=output)
+    return render_template('index.html', output=output,kind="TL;DR") 
 
 
-@app.route('/ One_Line_Summary')
+@app.route('/One_Line_Summary')
 def one_line():
     return render_template('index.html')
 
-@app.route('/ One_Line_Summary', methods=['POST'])
+@app.route('/One_Line_Summary', methods=['POST'])
 def one_line_post():
     user_input = request.form['text']
     extra = "One-sentence summary:"
@@ -77,7 +77,7 @@ def one_line_post():
         stop=["\"\"\""]
     )
     output= response.choices[0].text
-    return render_template('index.html', output=output)
+    return render_template('index.html', output=output,kind="One Line Summary")
 
 
 @app.route('/sheesh', methods=['POST'])

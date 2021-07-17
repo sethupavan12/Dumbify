@@ -3,8 +3,13 @@
 <head>
   <title>Dumbify</title>
   <style type="text/css">
+  /* align the items in the page properly */
+
     html{
     background-color: rgb(21, 167, 65);
+    font-family: monospace;
+    /* auto increase the height of the page */
+    height: 100%;
     }
 
     /* Centre the middle class of the page */
@@ -15,50 +20,33 @@
         position: relative;
         top: -50px;
         left: -50px;
+        font-family: monospace;
     }
 
 
-    /* make the webpage look beautiful */
-    body{
-        width: 1500px;
-        height: 1200px;
-        /*centre the margin of the page*/
-        margin: 0 auto;
-        background-color: #f1f1f1;
-        padding: 20px;
-        
-        border-radius: 10px;
-    }
-    input[type=text] {
-        width: 100%;
-        /* make the text box bigger */
-        height: 150px;
-        padding: 12px 20px;
-        margin: 0;
-        border: none;
-        /* text overflow to next line */
-        overflow: auto;
-        
-        border-bottom: 1px solid #d2d2d2;
-        /* make the text to fit with in the box fully */
-        text-align: center;
-        color: #555;
-        /* if the text in the box is too long to fit, increase the height of the input field */
-        overflow: hidden;
-        /* make the text box a little bit bigger than the default */
+    /* make textarea bigger */
+    
+
+    textarea{
+        /* textarea auto resizes to fit its content */
+        resize: none;
+        width: 80%;
+        height: 80%;
+        margin: 0 0 0 180px;
         font-size: 20px;
         padding: 10px;
-        border: none;
-        font-size: 20px;    
-        color: #333;
-
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #000;
+        color: #000;
         background-color: #fff;
-        border-radius: 10px;
-        border-radius: 10px;
+        font-family: monospace;
+        
+    
 
-        }
-    h3{
-        font-size: 50px;
+    }
+    h3,p{
+        font-size: 30px;
         font-weight: bold;
         margin-bottom: 20px;
         /*centre this*/
@@ -69,20 +57,29 @@
         background-color: #4CAF50;
         color: white;
         padding: 16px 20px;
-        margin: 8px 0;
+        
+        margin: 8px 8px 8px 40%;
         border: none;
         border-radius: 4px;
         cursor: pointer;
         width: 20%;
         height: 40px;
-        /* center this */
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -20px;
-        margin-left: -100px;
-    
 
+    }
+    .output{
+        /* put this text in a box and make it look pretty */
+        resize: none;
+        width: 80%;
+        height: 80%;
+        margin: 0 0 0 180px;
+        font-size: 20px;
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #000;
+        color: #000;
+        background-color: #fff;
+        font-family: monospace;
 
     }
     </style>
@@ -90,16 +87,19 @@
 
 </head>
 <body>
+    <h1>Dumbify</h1>
+    <p> You have selected {{kind}} so here you go!</p>
     <h3> Enter the text here</h3>
     <div class="container">
         <form method="POST">
-            <input type="text" size="100" name="text">
+            <!-- auto resize the texarea -->
+            <textarea class="form-control" name="text" rows="10" cols="100" id="text" placeholder="Enter the text here"></textarea>
             <br>    
             <br>    
             <input  class= "submit" type="submit">
         </form>
 
     </div>
-    <p> This is a dumbified version of the text you entered</p>
-    {{output}}
+    <p> This is the {{kind}} version of the text you entered</p>
+    <p class="output"> {{output}}</p>
 </body>

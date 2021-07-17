@@ -33,7 +33,7 @@ if choice == "1":
         stop=["\"\"\""]
     )
 
-    print(response.choices[0].text)
+    print(response)
 
 #if the user chooses 2nd grade summary, call the TLDR function
 elif choice == "2":
@@ -49,7 +49,7 @@ elif choice == "2":
         presence_penalty=0.0,
         stop=["\"\"\""]
     )
-    print(response.choices[0].text)
+    print(response)
 
 #if the user chooses one line summary, call the one line summary function
 elif choice == "3":
@@ -65,7 +65,7 @@ elif choice == "3":
         presence_penalty=0.0,
         stop=["\"\"\""]
     )
-    print(response.choices[0].text)
+    print(response.choices[0])
 
 
 #if the user chooses an invalid option, print an error message
