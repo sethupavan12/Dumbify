@@ -14,7 +14,7 @@ def intro():
 
 @app.route('/2nd_grade_summary')
 def second_grade_summary():
-    return render_template('index.html')
+    return render_template('index.html', kind="2nd Grade Summary")
 
 @app.route('/2nd_grade_summary', methods=['POST'])
 def second_grade_summary_post():
@@ -36,7 +36,7 @@ def second_grade_summary_post():
 
 @app.route('/TLDR')
 def tldr():
-    return render_template('index.html')
+    return render_template('index.html',kind="TL;DR")
 
 @app.route('/TLDR', methods=['POST'])
 def tldr_post():
@@ -59,7 +59,7 @@ def tldr_post():
 
 @app.route('/One_Line_Summary')
 def one_line():
-    return render_template('index.html')
+    return render_template('index.html',kind="One Line Summary")
 
 @app.route('/One_Line_Summary', methods=['POST'])
 def one_line_post():
