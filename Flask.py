@@ -9,12 +9,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def intro():
-    return render_template('IntroPage.html')
+    return render_template('index.html')
 
 
 @app.route('/2nd_grade_summary')
 def second_grade_summary():
-    return render_template('index.html', kind="2nd Grade Summary")
+    return render_template('main.html', kind="2nd Grade Summary")
 
 @app.route('/2nd_grade_summary', methods=['POST'])
 def second_grade_summary_post():
@@ -32,11 +32,11 @@ def second_grade_summary_post():
         stop=["\"\"\""]
     )
     output= response.choices[0].text
-    return render_template('index.html', output=output,kind="2nd Grade Summary") 
+    return render_template('main.html', output=output,kind="2nd Grade Summary") 
 
 @app.route('/TLDR')
 def tldr():
-    return render_template('index.html',kind="TL;DR")
+    return render_template('main.html',kind="TL;DR")
 
 @app.route('/TLDR', methods=['POST'])
 def tldr_post():
@@ -54,12 +54,12 @@ def tldr_post():
         stop=["\"\"\""]
     )
     output= response.choices[0].text
-    return render_template('index.html', output=output,kind="TL;DR") 
+    return render_template('main.html', output=output,kind="TL;DR") 
 
 
 @app.route('/One_Line_Summary')
 def one_line():
-    return render_template('index.html',kind="One Line Summary")
+    return render_template('main.html',kind="One Line Summary")
 
 @app.route('/One_Line_Summary', methods=['POST'])
 def one_line_post():
@@ -77,7 +77,7 @@ def one_line_post():
         stop=["\"\"\""]
     )
     output= response.choices[0].text
-    return render_template('index.html', output=output,kind="One Line Summary")
+    return render_template('main.html', output=output,kind="One Line Summary")
 
 
 @app.route('/sheesh', methods=['POST'])

@@ -1,0 +1,128 @@
+<!-- basic html page-->
+<html>
+<head>
+  <title>Dumbify</title>
+  <style type="text/css">
+  /* align the items in the page properly */
+
+    html{
+    background-color: rgb(21, 167, 65);
+    font-family: monospace;
+    /* auto increase the height of the page */
+    height: 100%;
+    }
+
+    /* Centre the middle class of the page */
+    .middle{
+        margin: 0 auto;
+        width: 800px;
+        height: 600px;
+        position: relative;
+        top: -50px;
+        left: -50px;
+        font-family: monospace;
+    }
+
+
+    /* make textarea bigger */
+    
+
+    textarea{
+        /* textarea auto resizes to fit its content */
+        resize: none;
+        width: 80%;
+        height: 80%;
+        margin: 0 0 0 180px;
+        font-size: 20px;
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #000;
+        color: #000;
+        background-color: #fff;
+        font-family: monospace;
+        
+    
+
+    }
+    h3,p{
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        /*centre this*/
+        text-align: center;
+    }
+    .submit{
+        /* make the button look pretty */
+        background-color: #000000;
+        /* animating the button */
+        transition: all 0.5s;
+        /* make the button bigger */
+        font-size: 40px;
+        /* make the button bigger */
+        font-weight: bold;
+        /* make the button bigger */
+        padding: 10px;
+        /* make the button bigger */
+        border-radius: 5px;
+        /* make the button bigger */
+        border: 1px solid #000;
+        /* make the button bigger */
+        box-shadow: 0px 0px 5px #000;
+        /* make the button bigger */
+        color: rgb(255, 255, 255);
+        /* make the button bigger */
+        text-align: center;
+        /* make the button bigger */
+        
+
+        padding: 16px 20px;
+        
+        margin: 8px 8px 8px 40%;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 20%;
+        height: 80px;
+
+    }
+    .output{
+        /* put this text in a box and make it look pretty */
+        resize: none;
+        width: 80%;
+        height: 80%;
+        margin: 0 0 0 180px;
+        font-size: 20px;
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #000;
+        color: #000;
+        background-color: #fff;
+        font-family: monospace;
+
+    }
+    </style>
+
+
+</head>
+<body>
+    <h1> <a href="/">Dumbify</a></h1>
+    <p> You have selected {{kind}} so here you go!</p>
+    <h3> Enter the text here</h3>
+    <div class="container">
+        <form method="POST">
+            <!-- auto resize the texarea -->
+            <textarea class="form-control" name="text" rows="10" cols="100" id="text" placeholder="Enter the text here"></textarea>
+            <br>    
+            <br>    
+            <input  class= "submit" type="submit">
+        </form>
+        <br> 
+        <br>
+
+
+    </div>
+    <p> This is the {{kind}} version of the text you entered</p>
+    <p class="output"> {{output}}</p>
+</body>

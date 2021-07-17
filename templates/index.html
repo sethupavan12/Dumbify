@@ -1,128 +1,186 @@
-<!-- basic html page-->
+<!-- basic html page -->
 <html>
+<!-- Link this html to wow.css -->
 <head>
-  <title>Dumbify</title>
-  <style type="text/css">
-  /* align the items in the page properly */
+    <title>Dumbify</title>
+    <style>
+        /* make the background neon green */
+        body {
+            background-color: #00FF00;
+            font-size: 16px;
+            font-family: "Open Sans", sans-serif;
+            color: rgb(0, 0, 0);
+            padding: 0;
+            margin: 0;
+            text-align: center;
 
-    html{
-    background-color: rgb(21, 167, 65);
-    font-family: monospace;
-    /* auto increase the height of the page */
-    height: 100%;
-    }
+        }
+        /* make middle a box */
+        .middle {
+            /* make the box a square */
+            width: 95%;
+            height: 40%;
+        
 
-    /* Centre the middle class of the page */
-    .middle{
-        margin: 0 auto;
-        width: 800px;
-        height: 600px;
-        position: relative;
-        top: -50px;
-        left: -50px;
-        font-family: monospace;
-    }
-
-
-    /* make textarea bigger */
+            background-color: #00FF00;
+            border: 2px solid black;
+            border-radius: 10px;
+            /* justify text to the left */
+            text-align: left;
+            /* make the text bigger */
+            font-size: 20px;
+            /* make the text black */
+            color: black;
+            /* make the text bold */
+            font-weight: bold;
+            
+            margin: auto;
+            padding: 0;
+        }
+        h2,p{
+            /* make the text look amazing */
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300;
+            font-size: 2em;
+            color: rgb(0, 0, 0);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            /* make the text bold */
+            font-weight: bold;
     
 
-    textarea{
-        /* textarea auto resizes to fit its content */
-        resize: none;
-        width: 80%;
-        height: 80%;
-        margin: 0 0 0 180px;
-        font-size: 20px;
-        padding: 10px;
-        border: 1px solid #000;
-        border-radius: 5px;
-        box-shadow: 0px 0px 5px #000;
-        color: #000;
-        background-color: #fff;
-        font-family: monospace;
-        
+        }
+        h1{
+
+            font-size: 3em;
+            font-weight: 300;
+            color: rgb(0, 0, 0);
+            margin: 30 50 30 0;
+
+            padding: 0;
+            text-align: center;
+            /* make the text bold */
+            font-weight: bold;
+
+        }
+        /* make the page look pretty */
+
+        .instructions{
+            /* make the instructions look pretty */
+            font-size: 1.5em;
+            font-weight: 300;
+            color: rgb(0, 0, 0);
+            margin: 0 0 0 25%;
+            padding: 0;
+            /* center the instructions */
+            text-align: left;
+            /* make the instructions bold */
+            font-weight: bold;
+
+
+        }
+        ol{
+            /* put the list in a box */
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            /* make the list look pretty */
+            font-size: 1.5em;
+            font-weight: 300;
+            color: rgb(0, 0, 0);
+            margin: 0 auto;
+            padding: 0;
+            /* center the instructions */
+            text-align: centre;
+            /* make the instructions bold */
+            font-weight: bold;
     
+        }
+        a{
+            /* make the links white */
+            color: rgb(82, 8, 129);
+            /* when hovered, make them blue */
 
-    }
-    h3,p{
-        font-size: 30px;
-        font-weight: bold;
-        margin-bottom: 20px;
-        /*centre this*/
-        text-align: center;
-    }
-    .submit{
-        /* make the button look pretty */
-        background-color: #000000;
-        /* animating the button */
-        transition: all 0.5s;
-        /* make the button bigger */
-        font-size: 40px;
-        /* make the button bigger */
-        font-weight: bold;
-        /* make the button bigger */
-        padding: 10px;
-        /* make the button bigger */
-        border-radius: 5px;
-        /* make the button bigger */
-        border: 1px solid #000;
-        /* make the button bigger */
-        box-shadow: 0px 0px 5px #000;
-        /* make the button bigger */
-        color: rgb(255, 255, 255);
-        /* make the button bigger */
-        text-align: center;
-        /* make the button bigger */
+            text-decoration: underline;
+
+            
+            
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        i{
+            /* make the font look pretty */
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300;
+            color: rgb(0, 0, 0);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            /*smaller font*/
+            font-size: 1em;
+
+        }
+        small{
+            /* make the font look pretty */
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300;
+            color: rgb(0, 0, 0);
         
-
-        padding: 16px 20px;
-        
-        margin: 8px 8px 8px 40%;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 20%;
-        height: 80px;
-
-    }
-    .output{
-        /* put this text in a box and make it look pretty */
-        resize: none;
-        width: 80%;
-        height: 80%;
-        margin: 0 0 0 180px;
-        font-size: 20px;
-        padding: 10px;
-        border: 1px solid #000;
-        border-radius: 5px;
-        box-shadow: 0px 0px 5px #000;
-        color: #000;
-        background-color: #fff;
-        font-family: monospace;
-
-    }
+        }
     </style>
-
-
 </head>
 <body>
-    <h1> <a href="/">Dumbify</a></h1>
-    <p> You have selected {{kind}} so here you go!</p>
-    <h3> Enter the text here</h3>
-    <div class="container">
-        <form method="POST">
-            <!-- auto resize the texarea -->
-            <textarea class="form-control" name="text" rows="10" cols="100" id="text" placeholder="Enter the text here"></textarea>
-            <br>    
-            <br>    
-            <input  class= "submit" type="submit">
-        </form>
-        <br> 
-        <br>
-
-
+    <!-- Place this in the middle of the page-->
+    <div class="top">
+        <h1>Dumbify</h1>
     </div>
-    <p> This is the {{kind}} version of the text you entered</p>
-    <p class="output"> {{output}}</p>
+
+    <div class="middle">
+        <h2>Dumbify is a tool for making your text more concise and readable.</h2>
+        <br>
+        <br>
+        
+        <p class="instructions">    
+            How to use:<br>
+            <br>    
+            1. Select what kind of simplification you want.<br>
+            <br>
+            2. Paste the text you want to simplify.<br>
+            <br>
+            3. Click on the submit below.<br>
+        </p>
+    </div>
+
+    <!-- make a ordered list with 1. Generate 2nd Grade Summary , 2. Generate TL;DR (Too Long; Didn't Read), 3. Generate One line Summary -->
+    <ol>
+        <li>
+            <a href="/2nd_grade_summary">Generate 2nd Grade Summary:          <br>    </a> <br>
+            <i>
+                This will generate a summary of the text so that even a 2nd grader can understand.<br><br><br>
+            </i>
+        </li>
+        <li>
+            <a href="/TLDR">Generate TL;DR (Too Long; Didn't Read):            <br>  </a><br>
+            <i>
+                This will help you understand the context without having to read the whole thing.<br><br><br>
+            </i>
+        </li>
+        <li>
+            <a href="/One_Line_Summary">Generate One line Summary:           <br>   </a><br>
+            <i>
+                This gives you the whole thing in one line.<br><br><br>
+            </i>
+        </li>
+    </ol>
+        
+    <small> Made by Sethu Pavan</small>
 </body>
+
+
+
+</html>
