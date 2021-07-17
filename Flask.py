@@ -3,7 +3,7 @@ import os
 import openai
 
 # Load your API key from an environment variable or secret management service
-openai.api_key = "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"
+openai.api_key = "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"
 
 app = Flask(__name__)
 
