@@ -8,4 +8,4 @@ Dumbify is powered by OpenAI's API which uses cutting-edge GPT-3 model family's 
 
 
 
-**Deployment : Pending** but can use locally if you have access to OpenAI API beta [as of 25/Jul]
+**Deployment : Pending** but can be used locally if you have access to OpenAI API beta [as of 25/Jul]
