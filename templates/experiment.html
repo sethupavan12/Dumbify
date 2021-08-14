@@ -1,0 +1,31 @@
+
+<html>
+  <head>
+    <title>Essay Outliner</title>
+    <meta charset="utf-8">
+    </head>
+    <body>
+        <h1> <a href="/">Dumbify</a></h1>
+        <p> Essay outline generator</p>
+        <h3> Pick a topic and the AI will guide you howto write an essay</h3>
+        <h3> for example Start with 'Create an outline for an essay about'</h3>
+        <div class="container">
+            <form method="POST">
+                <!-- auto resize the texarea -->
+                <textarea class="form-control" name="text" rows="10" cols="100" id="text" placeholder="Enter the text here"></textarea>
+                <br>    
+                <br>    
+                <input  class= "submit" type="submit">
+            </form>
+            <br> 
+            <br>
+    
+    
+        </div>
+        <p> This is the AI suggestion </p>
+        <p class="output"> {{experiment_output}}</p>
+    </body>
+
+</html>
+
+

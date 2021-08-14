@@ -6,7 +6,7 @@ from twython import Twython, TwythonError
 
 # Load your API key from an environment variable or secret management service
 openai.api_key = config.api_key
-
+max_tokens = 60
 app = Flask(__name__)
 
 @app.route('/')
@@ -27,7 +27,7 @@ def second_grade_summary_post():
         engine="davinci",
         prompt=user_input+"\n"+extra,
         temperature=0,
-        max_tokens=60,
+        max_tokens=max_tokens,
         top_p=1.0,
         frequency_penalty=0.0,
         presence_penalty=0.0,
@@ -49,7 +49,7 @@ def tldr_post():
         engine="davinci",
         prompt=user_input+"\n"+extra,
         temperature=0,
-        max_tokens=60,
+        max_tokens=max_tokens,
         top_p=1.0,
         frequency_penalty=0.0,
         presence_penalty=0.0,
@@ -72,7 +72,7 @@ def one_line_post():
         engine="davinci",
         prompt=user_input+"\n"+extra,
         temperature=0,
-        max_tokens=60,
+        max_tokens=max_tokens,
         top_p=1.0,
         frequency_penalty=0.0,
         presence_penalty=0.0,
@@ -88,7 +88,36 @@ def my_form_post():
     processed_text = text.upper()
     return processed_text
 
+@app.route('/experiment')
+def experiment():
+    return render_template('experiment.html')
 
+@app.route('/experiment', methods=['POST'])
+def experiment_post():
+    text = request.form['text']
+
+
+    response = openai.Completion.create(
+    engine="davinci-instruct-beta",
+    prompt=str(text),
+    temperature=0,
+    max_tokens=120,
+    top_p=1.0,
+    frequency_penalty=0.0,
+    presence_penalty=0.0
+    )
+
+    experiment_output = response.choices[0].text
+    return render_template('experiment.html', experiment_output=experiment_output)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+
+
+
+
+
+
