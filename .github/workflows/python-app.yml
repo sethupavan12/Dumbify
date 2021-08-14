@@ -26,4 +26,5 @@ jobs:
         pip install -r requirements.txt
     - name: Run the application 
       run: |
-        python '../flask.py'
+        ls
+      
