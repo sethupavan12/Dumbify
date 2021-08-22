@@ -111,7 +111,7 @@ def experiment_post():
     return render_template('experiment.html', experiment_output=experiment_output)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
 
 
 
