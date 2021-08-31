@@ -1,11 +1,10 @@
 from flask import Flask, request, render_template
 import os
 import openai
-from config import *
 from twython import Twython, TwythonError
 
 # Load your API key from an environment variable or secret management service
-openai.api_key = config.api_key
+openai.api_key = key
 max_tokens = 60
 app = Flask(__name__)
 
