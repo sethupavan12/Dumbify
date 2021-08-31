@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 import os
 import openai
-from twython import Twython, TwythonError
+
 
 # Load your API key from an environment variable or secret management service
 openai.api_key = key
